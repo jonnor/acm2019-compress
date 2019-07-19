@@ -7,6 +7,7 @@ bwaves,BDI,1.03
 bwaves,FPC,1.21
 bwaves,DuD,1.33
 bwaves,ZCA,1.00
+bwaves,lz4framed,1.623778523774396
 
 mcf,SC2,3.06867
 mcf,0block,1.00046
@@ -16,6 +17,7 @@ mcf,BDI,1.55
 mcf,FPC,1.67
 mcf,DuD,1.57
 mcf,ZCA,1.00
+mcf,lz4framed,3.941190265040899
 
 namd,SC2,2.20796
 namd,0block,1.1985
@@ -25,6 +27,7 @@ namd,BDI,1.58
 namd,FPC,1.34
 namd,DuD,1.25
 namd,ZCA,1.20
+namd,lz4framed,3.798727192665041
 
 x264,SC2,1.298
 x264,0block,1.16696
@@ -34,6 +37,7 @@ x264,BDI,1.20
 x264,FPC,1.25
 x264,DuD,1.27
 x264,ZCA,1.17
+x264,lz4framed,1.5121638754156623
 
 xz,SC2,2.002
 xz,0block,1.5731
@@ -43,4 +47,4 @@ xz,BDI,1.69
 xz,FPC,1.75
 xz,DuD,1.90
 xz,ZCA,1.57
-
+xz,lz4framed,3.208465201861155
