@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+compr
+*.core.dat
+zeropoint/
+bdi_fpc_zca/
+dumps/

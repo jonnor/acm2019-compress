@@ -1,0 +1,31 @@
+
+--------------------------------------------------------------------------------
+DISCLAIMER:
+This compression analysis tool is owned by ZeroPoint Technologies AB.
+It is shared for the ACM Europe Summer School 2019
+and it is intended to be used for educational purposes only.
+
+It is not allowed to be used for any commercial purpose.
+For any other use, permission must be granted by 
+ZeroPoint Technologies AB.
+info@zptcorp.com
+--------------------------------------------------------------------------------
+
+
+Training the selected Statistical compressor
+Training: 5% completedTraining: 9% completed
+
+SC2
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 23% completedCompression: 29% completedCompression: 35% completedCompression: 41% completedCompression: 47% completedCompression: 53% completedCompression: 59% completedCompression: 65% completedCompression: 71% completedCompression: 77% completedCompression: 83% completedCompression: 89% completedCompression: 95% completed
+CR: 1.298
+
+
+NULL
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 23% completedCompression: 29% completedCompression: 35% completedCompression: 41% completedCompression: 47% completedCompression: 53% completedCompression: 59% completedCompression: 65% completedCompression: 71% completedCompression: 77% completedCompression: 83% completedCompression: 89% completedCompression: 95% completed
+CR: 1.16696
+
+
+
+ZeroPoint's Hybrid Compression
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 23% completedCompression: 29% completedCompression: 35% completedCompression: 41% completedCompression: 47% completedCompression: 53% completedCompression: 59% completedCompression: 65% completedCompression: 71% completedCompression: 77% completedCompression: 83% completedCompression: 89% completedCompression: 95% completed
+CR: 1.31324
