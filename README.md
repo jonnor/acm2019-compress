@@ -48,7 +48,7 @@ As shown, WKdm and LZ4 perform admirably, and a high-level code analysis yields 
 
 There is another significant caveat which we could not resolve during the contest: Both the WKdm and LZ4 code operate on page-sized blocks, and thus have a considerable advantage compared with the provided compression tools (which operate on cache line-sized blocks). As such, the results for these schemes appear promising, but are unfortunately unfair comparisons with the majority of the compression tools.
 
-As for our BDI-based scheme, we expect that its low performance is due to most values not exhibiting value locality near our chosen base value (half word size). This simple approach certainly takes fewer than 20 cycles (one cycle to test the value, and another to subtract the base value as necessary), and clearly fits within the other constraints. But the test data show that the scheme cannot achieve a worthwhile compression ratio. There are other ideas for improvement which we cover in the next section.
+As for our BDI-based scheme (cons8), we expect that its low performance is due to most values not exhibiting value locality near our chosen base value (half word size). This simple approach certainly takes fewer than 20 cycles (one cycle to test the value, and another to subtract the base value as necessary), and clearly fits within the other constraints. But the test data show that the scheme cannot achieve a worthwhile compression ratio. There are other ideas for improvement which we cover in the next section.
 
 # Conclusion
 
