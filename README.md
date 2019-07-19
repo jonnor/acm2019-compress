@@ -1,6 +1,9 @@
 # ACM Summer School Workshop 2019
 # Cache and Memory Compression Techniques
 
+Sean Isaac Geronimo Anderson and Jon Nordby
+July 19, 2019
+
 # Introduction
 
 For this competition, we sought to evaluate the provided compression schemes, try new schemes from a literature search, and implement our own scheme for educational purposes. The new schemes were WKdm and LZ4, and we based our scheme on BDI.
