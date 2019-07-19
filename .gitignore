@@ -2,5 +2,5 @@
 compr
 *.core.dat
 zeropoint/
-bdi_fpc_zca/
+/bdi_fpc_zca/
 dumps/

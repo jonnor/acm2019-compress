@@ -1,0 +1,8 @@
+>>>>>> STATUS
+Total Size --> 730206800
+After subtracting remainder : (NEW) Total Size --> 730206784
+Non-Null blocks --> 7252848	Null blocks --> 4156633
+>>>>>> END OF STATUS
+
+Filename				BDI	FPC	DuD	NullBlks	ZCA
+../dumps/xz.core	1.69	1.75	1.90	4156633	1.57

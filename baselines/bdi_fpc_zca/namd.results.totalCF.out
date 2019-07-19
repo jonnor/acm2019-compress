@@ -1,0 +1,8 @@
+>>>>>> STATUS
+Total Size --> 183531448
+After subtracting remainder : (NEW) Total Size --> 183531392
+Non-Null blocks --> 2392718	Null blocks --> 474960
+>>>>>> END OF STATUS
+
+Filename				BDI	FPC	DuD	NullBlks	ZCA
+../dumps/namd.core	1.58	1.34	1.25	474960	1.20

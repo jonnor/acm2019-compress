@@ -1,0 +1,8 @@
+>>>>>> STATUS
+Total Size --> 637437192
+After subtracting remainder : (NEW) Total Size --> 637437184
+Non-Null blocks --> 9955368	Null blocks --> 4588
+>>>>>> END OF STATUS
+
+Filename				BDI	FPC	DuD	NullBlks	ZCA
+../dumps/mcf.core	1.55	1.67	1.57	4588	1.00

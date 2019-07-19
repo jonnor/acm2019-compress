@@ -1,0 +1,8 @@
+>>>>>> STATUS
+Total Size --> 175547424
+After subtracting remainder : (NEW) Total Size --> 175547392
+Non-Null blocks --> 2350489	Null blocks --> 392439
+>>>>>> END OF STATUS
+
+Filename				BDI	FPC	DuD	NullBlks	ZCA
+../dumps/x264.core	1.20	1.25	1.27	392439	1.17

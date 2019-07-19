@@ -1,0 +1,8 @@
+>>>>>> STATUS
+Total Size --> 750426496
+After subtracting remainder : (NEW) Total Size --> 750426496
+Non-Null blocks --> 11718978	Null blocks --> 6436
+>>>>>> END OF STATUS
+
+Filename				BDI	FPC	DuD	NullBlks	ZCA
+../dumps/bwaves.core	1.03	1.21	1.33	6436	1.00
