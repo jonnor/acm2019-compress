@@ -3,17 +3,29 @@
 
 # Introduction
 
-* Baseline
-* WKdm and LZ4
-* BDI implementation
+For this competition, we sought to evaluate the provided compression schemes, try new schemes from a literature search, and implement our own scheme for educational purposes. The new schemes were WKdm and LZ4, and we based our scheme on BDI.
 
 # Algorithms
 
 We ran several algorithms on the test data: SC^2, 0block, ZeroPoint, BDI, FPC, DuD, ZCA, WKdm, and LZ4. All but the last two were covered to some extent during today's tutorial, so we will not describe them here. The Wilson-Kaplan WKdm algorithm is used by Apple for compressing the swap file[3], and we decided to try it after seeing its performance in a paper on LZ4m [4] (which is an LZ4 variant specifically for compressing memory, and we did not have time to implement it in time for this contest). LZ4 is a compression algorithm with decompression speeds approaching that of main memory [5].
 
+Additionally, we attempted implementing BDI for educational purposes. Our implementation checks if a given word's value can be represented as an offset from half of the word size, or not. If so, we store the offset, else we store the word as-is. An indicator bit establishes whether a given value is compressed.
+
 # Experiment, Results, and Analysis
 
+We used the provided compression tools for evaluating all schemes, except WKdm and LZ4, for which we used code from the respective project pages. The test data were as provided on the tutorial network share, except that we extracted the memory area from each core dump and tested each algorithm only on this memory area. Here are tables and graphs illustrating our results:
+
+(tables and graphs go here)
+
+As shown, WKdm and LZ4 perform admirably, and a high-level code analysis yields that these algorithms should fit within the contest requirements, with some caveats: We did not find literature on WKdm (besides the source code) during the contest period, and so are not able to argue strongly about whether the algorithm could operate in 20 or fewer cycles. It uses a small number of temporary variables, certainly within 64 KiB in total, so the area constraint should be satisfied. It also performs about as quickly as the provided compression schemes, so if 0block is fast enough to satisfy the throughput constraint (32 GiB/s), then so should WKdm.
+
+There is another significant caveat which we could not resolve during the contest: Both the WKdm and LZ4 code operate on page-sized blocks, and thus have a considerable advantage compared with the provided compression tools (which operate on cache line-sized blocks). As such, the results for these schemes appear promising, but are unfortunately unfair comparisons with the majority of the compression tools.
+
+As for our BDI-based scheme, we expect that its low performance is due to most values not exhibiting value locality near our chosen base value (half word size).
+
 # Conclusion
+
+
 
 # Sources
 
