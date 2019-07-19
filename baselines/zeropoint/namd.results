@@ -1,0 +1,31 @@
+
+--------------------------------------------------------------------------------
+DISCLAIMER:
+This compression analysis tool is owned by ZeroPoint Technologies AB.
+It is shared for the ACM Europe Summer School 2019
+and it is intended to be used for educational purposes only.
+
+It is not allowed to be used for any commercial purpose.
+For any other use, permission must be granted by 
+ZeroPoint Technologies AB.
+info@zptcorp.com
+--------------------------------------------------------------------------------
+
+
+Training the selected Statistical compressor
+Training: 5% completedTraining: 9% completed
+
+SC2
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 22% completedCompression: 28% completedCompression: 34% completedCompression: 39% completedCompression: 45% completedCompression: 51% completedCompression: 57% completedCompression: 62% completedCompression: 68% completedCompression: 74% completedCompression: 79% completedCompression: 85% completedCompression: 91% completedCompression: 97% completed
+CR: 2.20796
+
+
+NULL
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 22% completedCompression: 28% completedCompression: 34% completedCompression: 39% completedCompression: 45% completedCompression: 51% completedCompression: 57% completedCompression: 62% completedCompression: 68% completedCompression: 74% completedCompression: 79% completedCompression: 85% completedCompression: 91% completedCompression: 97% completed
+CR: 1.1985
+
+
+
+ZeroPoint's Hybrid Compression
+Compression: 5% completedCompression: 11% completedCompression: 17% completedCompression: 22% completedCompression: 28% completedCompression: 34% completedCompression: 39% completedCompression: 45% completedCompression: 51% completedCompression: 57% completedCompression: 62% completedCompression: 68% completedCompression: 74% completedCompression: 79% completedCompression: 85% completedCompression: 91% completedCompression: 97% completed
+CR: 2.28635

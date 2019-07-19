@@ -1,0 +1,31 @@
+
+--------------------------------------------------------------------------------
+DISCLAIMER:
+This compression analysis tool is owned by ZeroPoint Technologies AB.
+It is shared for the ACM Europe Summer School 2019
+and it is intended to be used for educational purposes only.
+
+It is not allowed to be used for any commercial purpose.
+For any other use, permission must be granted by 
+ZeroPoint Technologies AB.
+info@zptcorp.com
+--------------------------------------------------------------------------------
+
+
+Training the selected Statistical compressor
+Training: 1% completedTraining: 3% completedTraining: 4% completedTraining: 6% completedTraining: 8% completedTraining: 9% completedTraining: 9% completed
+
+SC2
+Compression: 1% completedCompression: 3% completedCompression: 4% completedCompression: 6% completedCompression: 8% completedCompression: 9% completedCompression: 11% completedCompression: 13% completedCompression: 14% completedCompression: 16% completedCompression: 18% completedCompression: 19% completedCompression: 21% completedCompression: 23% completedCompression: 24% completedCompression: 26% completedCompression: 27% completedCompression: 29% completedCompression: 31% completedCompression: 32% completedCompression: 34% completedCompression: 36% completedCompression: 37% completedCompression: 39% completedCompression: 41% completedCompression: 42% completedCompression: 44% completedCompression: 46% completedCompression: 47% completedCompression: 49% completedCompression: 50% completedCompression: 52% completedCompression: 54% completedCompression: 55% completedCompression: 57% completedCompression: 59% completedCompression: 60% completedCompression: 62% completedCompression: 64% completedCompression: 65% completedCompression: 67% completedCompression: 69% completedCompression: 70% completedCompression: 72% completedCompression: 74% completedCompression: 75% completedCompression: 77% completedCompression: 78% completedCompression: 80% completedCompression: 82% completedCompression: 83% completedCompression: 85% completedCompression: 87% completedCompression: 88% completedCompression: 90% completedCompression: 92% completedCompression: 93% completedCompression: 95% completedCompression: 97% completedCompression: 98% completed
+CR: 3.06867
+
+
+NULL
+Compression: 1% completedCompression: 3% completedCompression: 4% completedCompression: 6% completedCompression: 8% completedCompression: 9% completedCompression: 11% completedCompression: 13% completedCompression: 14% completedCompression: 16% completedCompression: 18% completedCompression: 19% completedCompression: 21% completedCompression: 23% completedCompression: 24% completedCompression: 26% completedCompression: 27% completedCompression: 29% completedCompression: 31% completedCompression: 32% completedCompression: 34% completedCompression: 36% completedCompression: 37% completedCompression: 39% completedCompression: 41% completedCompression: 42% completedCompression: 44% completedCompression: 46% completedCompression: 47% completedCompression: 49% completedCompression: 50% completedCompression: 52% completedCompression: 54% completedCompression: 55% completedCompression: 57% completedCompression: 59% completedCompression: 60% completedCompression: 62% completedCompression: 64% completedCompression: 65% completedCompression: 67% completedCompression: 69% completedCompression: 70% completedCompression: 72% completedCompression: 74% completedCompression: 75% completedCompression: 77% completedCompression: 78% completedCompression: 80% completedCompression: 82% completedCompression: 83% completedCompression: 85% completedCompression: 87% completedCompression: 88% completedCompression: 90% completedCompression: 92% completedCompression: 93% completedCompression: 95% completedCompression: 97% completedCompression: 98% completed
+CR: 1.00046
+
+
+
+ZeroPoint's Hybrid Compression
+Compression: 1% completedCompression: 3% completedCompression: 4% completedCompression: 6% completedCompression: 8% completedCompression: 9% completedCompression: 11% completedCompression: 13% completedCompression: 14% completedCompression: 16% completedCompression: 18% completedCompression: 19% completedCompression: 21% completedCompression: 23% completedCompression: 24% completedCompression: 26% completedCompression: 27% completedCompression: 29% completedCompression: 31% completedCompression: 32% completedCompression: 34% completedCompression: 36% completedCompression: 37% completedCompression: 39% completedCompression: 41% completedCompression: 42% completedCompression: 44% completedCompression: 46% completedCompression: 47% completedCompression: 49% completedCompression: 50% completedCompression: 52% completedCompression: 54% completedCompression: 55% completedCompression: 57% completedCompression: 59% completedCompression: 60% completedCompression: 62% completedCompression: 64% completedCompression: 65% completedCompression: 67% completedCompression: 69% completedCompression: 70% completedCompression: 72% completedCompression: 74% completedCompression: 75% completedCompression: 77% completedCompression: 78% completedCompression: 80% completedCompression: 82% completedCompression: 83% completedCompression: 85% completedCompression: 87% completedCompression: 88% completedCompression: 90% completedCompression: 92% completedCompression: 93% completedCompression: 95% completedCompression: 97% completedCompression: 98% completed
+CR: 3.06894
