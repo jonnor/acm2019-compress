@@ -41,7 +41,8 @@ Several variations were designed, nicknamed MLZ4-1,2. Got up to 1.92Gbps on a 26
 
 We used the provided compression tools for evaluating all schemes, except WKdm and LZ4, for which we used code from the respective project pages. The test data were as provided on the tutorial network share, except that we extracted the memory area from each core dump and tested each algorithm only on this memory area. Here are tables and graphs illustrating our results:
 
-(tables and graphs go here)
+![Results](https://raw.githubusercontent.com/jonnor/acm2019-compress/master/results.png "Results")
+
 
 As shown, WKdm and LZ4 perform admirably, and a high-level code analysis yields that these algorithms should fit within the contest requirements, with some caveats: We did not find literature on WKdm (besides the source code) during the contest period, and so are not able to argue strongly about whether the algorithm could operate in 20 or fewer cycles. It uses a small number of temporary variables, certainly within 64 KiB in total, so the area constraint should be satisfied. It also performs about as quickly as the provided compression schemes, so if 0block is fast enough to satisfy the throughput constraint (32 GiB/s), then so should WKdm.
 
