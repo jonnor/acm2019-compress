@@ -7,9 +7,35 @@ For this competition, we sought to evaluate the provided compression schemes, tr
 
 # Algorithms
 
-We ran several algorithms on the test data: SC^2, 0block, ZeroPoint, BDI, FPC, DuD, ZCA, WKdm, and LZ4. All but the last two were covered to some extent during today's tutorial, so we will not describe them here. The Wilson-Kaplan WKdm algorithm is used by Apple for compressing the swap file[3], and we decided to try it after seeing its performance in a paper on LZ4m [4] (which is an LZ4 variant specifically for compressing memory, and we did not have time to implement it in time for this contest). LZ4 is a compression algorithm with decompression speeds approaching that of main memory [5].
+We ran several algorithms on the test data: SC^2, 0block, ZeroPoint, BDI, FPC, DuD, ZCA, WKdm, and LZ4. All but the last two were covered to some extent during today's tutorial, so we will not describe them here. The Wilson-Kaplan WKdm algorithm is used by Apple for compressing the swap file[3]. LZ4 is a compression algorithm with decompression speeds approaching that of main memory[5].
 
 Additionally, we attempted implementing BDI for educational purposes. Our implementation checks if a given word's value can be represented as an offset from half of the word size, or not. If so, we store the offset, else we store the word as-is. An indicator bit establishes whether a given value is compressed.
+
+## LZ4 in hardware
+We searched the literature for hardware-based implementations of LZ4 that could be applicable to memory compresssion.
+
+Xilinx provides a LZ4 for their FPGAs. On a Alveo U200 running at 256 MHz,
+it can reach over 1.6 GB/s throughput for decompression and compression,
+using a total of 110k LUTs, 105k REG, and 250 RAM blocks.
+
+There are several papers showing hard-ware acceleration for variation of the LZ4 algorithm.
+
+LZ4m [4] is a LZ4 variant specifically for compressing memory. 
+
+Design of Hardware Accelerator for Lempel-Ziv 4 (LZ4) Compression
+https://doi.org/10.1587/elex.14.20170399
+
+Accelerator is verified using FPGA and fabricated using 65nm CMOS technology.
+
+- Supports up to 4Gbit/s compression with 75MHz clock
+- 392 K gate counts
+- Compression ratio is measured up to 2.69
+
+Data Compression Device based on Modified LZ4 Algorithm
+https://doi.org/10.1109/TCE.2018.2810480
+
+Several variations were designed, nicknamed MLZ4-1,2. Got up to 1.92Gbps on a 260MHz FPGA.
+
 
 # Experiment, Results, and Analysis
 
@@ -42,4 +68,6 @@ Future work would entail finishing limiting WKdm and LZ4 to use cache line-sized
 [4] http://csl.skku.edu/papers/icce17.pdf
 
 [5] https://github.com/lz4/lz4
+
+[6] https://github.com/Xilinx/Applications/tree/master/data_compression/xil_lz4
 
