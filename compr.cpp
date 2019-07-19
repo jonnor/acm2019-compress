@@ -24,20 +24,66 @@ using std::cerr;
 using std::endl;
 using std::string;
 
+
+/*
+Small integer compression.
+If 32bit word can fit in < N bits after subtracting the base, store it in N bits
+
+tag    data
+0      32 bits
+1      N bits
+
+*/
+
+int
+bdi_compress(cacheline* line) {
+
+  // FIXME: consider having a base of signed-int32-0
+  // or measure typical periodically
+  const uint32_t base = 0; 
+
+  const uint32_t *dwords = line->dword;
+
+  int32_t compressed_size_bits = 0;
+
+  for (int i=0; i<16; i++) {
+      const uint32_t offset = base - dwords[i];
+      //printf("offset %x \n", offset);
+
+      const int tag_bits = 2;
+      const int compressed_bits = 8;
+      if (offset < 2<<compressed_bits) {
+          compressed_size_bits += tag_bits+compressed_bits;
+      } else {
+          // not compressible, just adding tag
+          compressed_size_bits += tag_bits+32;
+      }
+
+      // TODO: add tag if not compressed
+  }
+
+  const int compressed_size = ((compressed_size_bits/8)+1);
+  //printf("cr=%f\n", 64.0/compressed_size);
+
+  return compressed_size;
+
+}
+
 // TODO: Implement a compression method to evaluate
 // Return the compressed size of the cacheline
 size_t compress_line(cacheline* line) {
 
   static int line_no = 0;
 
-  if (line_no == 0) {
-    printf("line%d = [", line_no);
-    for (int i=0; i<64; i++) {
-      printf("0x%02x,", line->byte[i]);
-    }
-    printf("]\n");
+  return bdi_compress(line);
+
+  /*
+  if (line_no == 1) {
+    return bdi_compress(line);
   }
-  line_no += 1;
+
+  line_no +=1;
+  */
 
   //cerr << line->float32[4].b.exp << endl;
   return 64;
