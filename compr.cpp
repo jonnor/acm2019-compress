@@ -150,7 +150,7 @@ int main(int argc, char** argv) {
 
   // Dump raw memory to a file
   std::ofstream file;
-  file.open(base_name(dumpfile)+".dat", std::ios_base::binary);
+  file.open((base_name(dumpfile)+".dat").c_str(), std::ios_base::binary);
   assert(file.is_open());
   file.write((const char *)bytes, truncated_size);
 

@@ -1,5 +1,5 @@
 compr: compr.cpp
-	g++ $< -o $@ -lbfd -liberty -lz -ldl
+	g++ -std=c++98 $< -o $@ -lbfd -liberty -lz -ldl
 
 run: compr
 	./compr dumps/xz.core
