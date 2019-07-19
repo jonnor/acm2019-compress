@@ -48,3 +48,9 @@ xz,FPC,1.75
 xz,DuD,1.90
 xz,ZCA,1.57
 xz,lz4framed,3.208465201861155
+
+mcf,cons8,1.02
+x264,cons8,1.01
+bwaves,cons8,1.03
+xz,cons8,1.06
+namd,cons8,1
