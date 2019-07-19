@@ -1,25 +1,25 @@
 dataset,method,cr
 bwaves,SC2,1.64012
-bwaves,NULL,1.00055
+bwaves,0block,1.00055
 bwaves,ZeroPoint,1.64021
 bwaves,WKdm,1.50802923070041040034
 
 mcf,SC2,3.06867
-mcf,NULL,1.00046
+mcf,0block,1.00046
 mcf,ZeroPoint,3.06894
 mcf,WKdm,2.73181129657006364808
 
 namd,SC2,2.20796
-namd,NULL,1.1985
+namd,0block,1.1985
 namd,ZeroPoint,2.28635
 namd,WKdm,1.16680863075899969864
 
 x264,SC2,1.298
-x264.,NULL,1.16696
-x264,1.31324
+x264,0block,1.16696
+x264,ZeroPoint,1.31324
 x264,WKdm,1.22532594766471009232
 
 xz,SC2,2.002
-xz,NULL,1.5731
+xz,0block,1.5731
 xz,ZeroPoint,2.0487
 xz,WKdm,1.98009251659961184241
