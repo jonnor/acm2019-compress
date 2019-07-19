@@ -44,26 +44,38 @@ bdi_compress(cacheline* line) {
 
   const uint32_t *dwords = line->dword;
 
-  int32_t compressed_size_bits = 0;
+  //int32_t compressed_size_bits = 0;
+
+  const int slot_bits = 1+32;
+  int slots_used = 0;
+  int consecutive_8 = 0;
+  int item_no = 0;
 
   for (int i=0; i<16; i++) {
-      const uint32_t offset = base - dwords[i];
+      const uint32_t offset = dwords[i] - base;
       //printf("offset %x \n", offset);
 
-      const int tag_bits = 2;
-      const int compressed_bits = 8;
-      if (offset < 2<<compressed_bits) {
-          compressed_size_bits += tag_bits+compressed_bits;
+      if (offset < 2<<8) {
+          consecutive_8 += 1;
       } else {
-          // not compressible, just adding tag
-          compressed_size_bits += tag_bits+32;
+          consecutive_8 = 0;
       }
 
-      // TODO: add tag if not compressed
+      item_no += 1;
+      //printf("item=%d %d\n", item_no);
+      if (item_no == 4) {
+        if (consecutive_8 == 4) {
+            slots_used += 1;
+        } else {
+            slots_used += 4;
+        }
+        item_no = 0;
+      }
   }
 
-  const int compressed_size = ((compressed_size_bits/8)+1);
-  //printf("cr=%f\n", 64.0/compressed_size);
+  const int compressed_size_bits = slot_bits * slots_used;
+  const int compressed_size = compressed_size_bits/8;
+  //printf("compressed=%d %d\n", compressed_size, slots_used);
 
   return compressed_size;
 
@@ -138,7 +150,7 @@ bool extract_data(const string& filename, uint8_t** data, size_t& data_size) {
     if (!p->flags & SEC_HAS_CONTENTS) continue;
 
 
-    cerr << "Section " << p->name << "  " << p->size << " bytes" << endl;
+    //cerr << "Section " << p->name << "  " << p->size << " bytes" << endl;
     size_t new_size = buf_size + p->size;
 
     void* new_buf = realloc(buf, new_size);
@@ -195,16 +207,18 @@ int main(int argc, char** argv) {
 
 
   // Dump raw memory to a file
+#if 0
   std::ofstream file;
   file.open((base_name(dumpfile)+".dat").c_str(), std::ios_base::binary);
   assert(file.is_open());
   file.write((const char *)bytes, truncated_size);
+#endif
 
   // See what kind of compression we can expect!
   size_t compressed_size = compress(bytes, truncated_size);
 
   float compression_ratio = (float) truncated_size / (float) compressed_size;
 
-  cout << "Compression ratio: " << std::setprecision(3) << compression_ratio << endl;
+  cout << "Compression: " << std::setprecision(3) << compression_ratio << endl;
 
 }
